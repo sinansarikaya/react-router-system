@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Users from "./pages/Users";
+import Error404 from "./pages/Error404";
 
 function App() {
   return (
@@ -22,9 +23,6 @@ function App() {
           <li>
             <NavLink to="/users">Users</NavLink>
           </li>
-          <li>
-            <NavLink to="/user">User</NavLink>
-          </li>
         </ul>
       </nav>
       <Routes>
@@ -32,6 +30,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/users/*" element={<Users />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );
